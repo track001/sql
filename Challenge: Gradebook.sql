@@ -43,7 +43,7 @@ Winstonia	82	90
 */
 
 /* Create a table that shows how many students have earned which letter_grade.
-Output the letter_grade by useing CASE with the number_grade column:
+Output the letter_grade by using CASE with the number_grade column:
 'A' > 90
 'B' > 80
 'C' > 70
