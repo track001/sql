@@ -16,8 +16,7 @@ SELECT * FROM books;
 /*
 QUERY RESULTS
 Id	Book	Rating /5
-______________________________________________
-1 |	Project Hail Mary                     |	3
-2	| The Lion, The Witch, and the Wardrobe |	5
-3	| Paper Towns	                          | 4
+1	Project Hail Mary	3
+2	The Lion, The Witch, and the Wardrobe	5
+3	Paper Towns	4
 */
