@@ -13,7 +13,7 @@ SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
 /*
 QUERY RESULTS
 Id	Name	quantity	aisle
-__________________________
+_______________________________
 1	Bananas	4	7
 4	Ice cream	1	12
 */
