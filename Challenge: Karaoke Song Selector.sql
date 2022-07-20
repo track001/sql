@@ -64,7 +64,7 @@ Call me maybe
 
 /* Select all songs using AND to show the titles of songs that have an 'epic' mood, released after 1990,and less than 4 minutes in duration. */
 /* 4(60 seconds) = 240 seconds */
-SELECT title FROM songs where mood = "epic" AND released > 1990 AND duration < 240;
+SELECT title FROM songs WHERE mood = "epic" AND released > 1990 AND duration < 240;
 
 /*
 title
