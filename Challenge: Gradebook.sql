@@ -41,3 +41,20 @@ Wincifer	66	71
 Winster	76	50
 Winstonia	82	90
 */
+
+/* Create a table that shows how many students have earned which letter_grade.
+Output the letter_grade by useing CASE with the number_grade column:
+'A' > 90
+'B' > 80
+'C' > 70
+'F' otherwise
+Then use COUNT with GROUP BY to show the number of students with each of those grades. */
+SELECT COUNT(*),
+    CASE
+        WHEN number_grade > 90 THEN "A"
+        WHEN number_grade > 80 THEN "B"
+        WHEN number_grade > 70 THEN "C"
+        ELSE "F"
+    END AS "letter_grade"
+FROM student_grades
+GROUP BY letter_grade
