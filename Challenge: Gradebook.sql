@@ -58,3 +58,10 @@ SELECT COUNT(*),
     END AS "letter_grade"
 FROM student_grades
 GROUP BY letter_grade
+/* QUERY RESULTS
+COUNT(*)	letter_grade
+1	A
+3	B
+1	C
+1	F
+*/
