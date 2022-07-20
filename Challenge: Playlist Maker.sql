@@ -1,4 +1,4 @@
-/* Challenge: Playlist Maker: Databse of songs and artists */
+/* Database of songs and artists: Making playlists from them. */
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -57,16 +57,13 @@ INSERT INTO songs (artist, title)
     VALUES ("Queen", "Bohemian Rhapsody");
 INSERT INTO songs (artist, title)
     VALUES ("Guns N' Roses", "Don't cry");
-
-/* Select the title of all the songs by the artist named 'Queen'. */
+ 
+ /*select the title of all the songs by the artist named 'Queen'. */
 SELECT title FROM songs where artist = "Queen";
 
-/* Select the name of all of the artists from the 'Pop' genre. */
+/*QUERY RESULTS
+title
+Bicycle Race
+Bohemian Rhapsody
+*/
 
-SELECT name FROM artists WHERE genre = "Pop";
-
-/* Add another query that will select the title of all the songs from the 'Pop' artists. */
-SELECT title FROM songs 
-WHERE artist IN (
-    SELECT name FROM artists 
-    WHERE genre = "Pop");
