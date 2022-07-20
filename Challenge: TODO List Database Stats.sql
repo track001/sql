@@ -11,7 +11,7 @@ INSERT INTO todo_list VALUES (4, "Finish typing this challenge solution", 40);
 
 /*
 DATABASE SCHEMA
-___________________
+_____________________
 to do list      3 rows
 Id  (PK)          INTEGER
 item             TEXT
@@ -19,9 +19,19 @@ minutes       INTEGER
 
 QUERY RESULTS
 aisle	SUM(quantity)
-____________________
+_______________________
 2	9
 4	1
 7	56
 12	1
+*/
+
+/* Select the SUM of minutes it will take to do all of the items on the TODO List */
+SELECT SUM(minutes) FROM todo_list;
+
+/* 
+QUERY RESULTS
+_________________
+SUM(minutes)
+105
 */
