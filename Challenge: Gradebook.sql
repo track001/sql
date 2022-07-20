@@ -1,4 +1,4 @@
-/* Gradebook database */
+/* Gradebook database to track student info: grades, name, number grade, and percent of activities completed */
 CREATE TABLE student_grades (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -25,4 +25,19 @@ id (PK)INTEGER
 nameTEXT
 number_gradeINTEGER
 fraction_completedREAL
+*/
+
+/* Select all of the rows, display the name, number_grade, and percent_completed */
+/* Can be computed by multiplying and rounding the fraction_completed column */
+SELECT name, number_grade, ROUND(fraction_completed * 100) AS percent_completed 
+ FROM student_grades; 
+ 
+ /* QUERY RESULTS
+name	number_grade	percent_completed
+Winston	90	81
+Winnefer	95	90
+Winsteen	85	91
+Wincifer	66	71
+Winster	76	50
+Winstonia	82	90
 */
