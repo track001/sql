@@ -1,4 +1,4 @@
-
+/* Challenge: Playlist Maker: Databse of songs and artists */
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -58,7 +58,7 @@ INSERT INTO songs (artist, title)
 INSERT INTO songs (artist, title)
     VALUES ("Guns N' Roses", "Don't cry");
 
-/*select the title of all the songs by the artist named 'Queen'. */
+/* Select the title of all the songs by the artist named 'Queen'. */
 SELECT title FROM songs where artist = "Queen";
 
 /* Select the name of all of the artists from the 'Pop' genre. */
