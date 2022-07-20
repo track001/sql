@@ -46,4 +46,14 @@ INSERT INTO books (author, title, words)
     VALUES ("J.R.R. Tolkien", "Two Towers", 143436);
 INSERT INTO books (author, title, words)
     VALUES ("J.R.R. Tolkien", "Return of the King", 134462);
+
+ /* Select all authors who have written more than 1 million words using GROUP BY and HAVING */
+SELECT author, SUM(words) AS total_words 
+FROM books GROUP BY author 
+HAVING total_words > 1000000;
+
+/* QUERY RESULTS
+author	total_words
+J.K. Rowling	1086594
+*/
  
