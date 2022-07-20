@@ -439,7 +439,7 @@ Kathryn C. Thornton	1984	10	Retired	8/17/1952	Montgomery, AL	Female	Auburn Unive
 Mary E. Weber	1992	14	Retired	8/24/1962	Cleveland, OH	Female	Purdue University; University of California-Berkeley	Chemical Engineering	Physical Chemistry	NULL	NULL	2	450	0	0	STS-70 (Discovery), STS-101 (Atlantis)	NULL	NULL
 */
 
-/*Return count of astronauts wher eyear was greater than or equal to 1990*/
+/*Return count of astronauts where year was greater than or equal to 1990*/
 SELECT COUNT(*) FROM astronauts WHERE year > 1990;
 
 /*
@@ -493,4 +493,123 @@ Ronald M. Sega
 Loren J. Shriver
 Charles Lacy Veach
 Terry W. Virts Jr.
+*/
+
+/*Return the avg of all atronauts space flights*/
+SELECT AVG(space_flights) FROM astronauts;
+
+/* QUERY RESULTS
+AVG(space_flights)
+2.3641456582633054
+*/
+
+/*Return death date of astronauts where military rank was Colonel */
+SELECT death_date FROM astronauts WHERE military_rank LIKE "%colonel%";
+Death_Date
+/* QUERY RESULTS
+Where Death Date 'NULL' = alive.
+NULL
+NULL
+NULL
+NULL
+2/1/2003
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+10/4/2004
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+12/2/1987
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+1/27/1967
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+2/1/2003
+8/8/1991
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+1/28/1986
+3/22/1996
+NULL
+NULL
+NULL
+NULL
+12/12/1994
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+NULL
+1/27/1967
+NULL
+NULL
+NULL
 */
