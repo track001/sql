@@ -505,7 +505,6 @@ AVG(space_flights)
 
 /*Return death date of astronauts where military rank was Colonel */
 SELECT death_date FROM astronauts WHERE military_rank LIKE "%colonel%";
-Death_Date
 /* QUERY RESULTS
 Where Death Date 'NULL' = alive.
 NULL
