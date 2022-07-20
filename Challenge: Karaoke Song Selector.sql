@@ -52,7 +52,7 @@ Sweet Caroline
 Call me maybe
 */
 
-/* Select all songs that uses OR to show the titles of songs that have an 'epic' mood or a release date after 1990. */
+/* Select all songs that using OR to show the titles of songs that have an 'epic' mood or a release date after 1990. */
 SELECT title FROM songs WHERE released > 1990 OR mood = "epic";
 /* title
 Bohemian Rhapsody
