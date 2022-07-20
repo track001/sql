@@ -22,8 +22,8 @@ ________________________
 4	Shrek 2	2004
 5	The Lion King	1994
 6	Disney's Up	2009
-
 */
+
 /* Retrieve only the movies that were released in the year 2000 or later, not before. 
 Sort the results so that the earlier movies are listed first. */
 SELECT * FROM movies WHERE release_year > 2000 ORDER BY release_year;
