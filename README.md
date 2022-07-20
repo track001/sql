@@ -1,4 +1,4 @@
-- Learning SQL through Khan Academy course: 
+Learning SQL through Khan Academy course: 
 - SQL Basics, Advanced SQL Queries, Relational Queries in SQL, and Modifying Databases in SQL.
 
 <!---
