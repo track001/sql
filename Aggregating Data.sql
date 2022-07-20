@@ -12,8 +12,8 @@ SELECT aisle, SUM(quantity) FROM groceries GROUP BY aisle;
 QUERY RESULTS
 aisle	SUM(quantity)
 ___________________
-2 |	9
-4 | 1
-7 | 56
-12|	1
+2 9
+4 1
+7 56
+12 1
 */
