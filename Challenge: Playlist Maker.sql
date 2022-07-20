@@ -61,9 +61,32 @@ INSERT INTO songs (artist, title)
  /*select the title of all the songs by the artist named 'Queen'. */
 SELECT title FROM songs where artist = "Queen";
 
-/*QUERY RESULTS
+/* QUERY RESULTS
 title
 Bicycle Race
 Bohemian Rhapsody
 */
 
+/* Select the name of all of the artists from the 'Pop' genre. */
+SELECT name FROM artists WHERE genre = "Pop";
+/* QUERY RESULTS
+name
+Taylor Swift
+Celine Dion
+Rihanna
+Gloria Estefan
+*/
+
+/* Add another query that will select the title of all the songs from the 'Pop' artists. */
+SELECT title FROM songs 
+WHERE artist IN (
+    SELECT name FROM artists 
+    WHERE genre = "Pop");
+/* QUERY RESULTS
+title
+Shake it off
+Stay
+My heart will go on
+A new day has come
+Conga
+*/
