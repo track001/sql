@@ -12,6 +12,27 @@ INSERT INTO movies VALUES (6, "Disney's Up", 2009);
 /* Select all movies */
 SELECT * FROM movies WHERE release_year;
 
+/*
+QUERY RESULTS
+Id	Name	Release_year
+________________________
+1	Avatar	2009
+2	Titanic	1997
+3	Star Wars: Episode IV: A New Hope	1977
+4	Shrek 2	2004
+5	The Lion King	1994
+6	Disney's Up	2009
+
+*/
 /* Retrieve only the movies that were released in the year 2000 or later, not before. 
 Sort the results so that the earlier movies are listed first. */
 SELECT * FROM movies WHERE release_year > 2000 ORDER BY release_year;
+
+/*
+QUERY RESULTS
+Id	Name	Release_year
+_________________________
+4	Shrek 2	2004
+1	Avatar	2009
+6	Disney's Up	2009
+*/
