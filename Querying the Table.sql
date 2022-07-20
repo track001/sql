@@ -9,3 +9,11 @@ INSERT INTO groceries VALUES(6, "Chocolate syrup", 0, 4);
 
 /* Select groceries in aisle 5 or greater and order from least to greatest */
 SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
+
+/*
+QUERY RESULTS
+Id	Name	quantity	aisle
+__________________________
+1	Bananas	4	7
+4	Ice cream	1	12
+*/
