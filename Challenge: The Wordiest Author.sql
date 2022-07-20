@@ -57,3 +57,11 @@ author	total_words
 J.K. Rowling	1086594
 */
  
+/* Select all authors that write more than an average of 150,000 words per book (wpb). Results table should include 'author' and average words as an 'avg_words' column. */
+SELECT author, avg(words) AS avg_words FROM books 
+GROUP BY author having avg_words > 150000;
+
+/* QUERY RESULTS
+author	avg_words
+J.K. Rowling	155227.7142857143
+*/
