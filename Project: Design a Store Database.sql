@@ -1,5 +1,3 @@
-/* Store database for climbing shoes. */
-
 /* Climbing Shoe Store Database
 La Sportiva
 5.10
@@ -32,7 +30,7 @@ __________________________________
 6	Evolv	1	205	9.5
 */
 
-/* Order items by price */
+/* Order items by price (least to greatest) */
 SELECT price, brand FROM shoes GROUP BY price;
 
 /*
@@ -49,7 +47,7 @@ ______________
 /* Display statistics about shoes size 6 and higher ordered by brand*/
 SELECT * FROM shoes WHERE size > 6 ORDER BY brand (alphabetical order);
 
-*/
+/*
 id	brand	quantity	price	size
 2	5.10	3	180	8
 4	Butora	2	160	7.5
