@@ -66,7 +66,7 @@ Call me maybe
 /* 4(60 seconds) = 240 seconds */
 SELECT title FROM songs where mood = "epic" AND released > 1990 AND duration < 240;
 
-*/
+/*
 title
 Let it go
 */
