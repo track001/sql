@@ -24,6 +24,31 @@ CREATE TABLE astronauts(
    Death_Date          TEXT, 
    Death_Mission       TEXT
 );
+
+/*
+DATABASE SCHEMA
+astronauts357 rows
+Name (PK)TEXT
+YearINTEGER
+GroupNumINTEGER
+StatusTEXT
+Birth_DateTEXT
+Birth_PlaceTEXT
+GenderTEXT
+Alma_MaterTEXT
+Undergraduate_MajorTEXT
+Graduate_MajorTEXT
+Military_RankTEXT
+Military_BranchTEXT
+Space_FlightsINTEGER
+Space_Flight_hrINTEGER
+Space_WalksINTEGER
+Space_Walks_hrREAL
+MissionsTEXT
+Death_DateTEXT
+Death_MissionTEXT
+*/
+
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Joseph M. Acaba',2004,19,'Active','5/17/1967','Inglewood, CA','Male','University of California-Santa Barbara; University of Arizona','Geology','Geology',NULL,NULL,2,3307,2,13,'STS-119 (Discovery), ISS-31/32 (Soyuz)',NULL,NULL);
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Loren W. Acton',NULL,NULL,'Retired','3/7/1936','Lewiston, MT','Male','Montana State University; University of Colorado','Engineering Physics','Solar Physics',NULL,NULL,1,190,0,0,'STS 51-F (Challenger)',NULL,NULL);
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('James C. Adamson',1984,10,'Retired','3/3/1946','Warsaw, NY','Male','US Military Academy; Princeton University','Engineering','Aerospace Engineering','Colonel','US Army (Retired)',2,334,0,0,'STS-28 (Columbia), STS-43 (Atlantis)',NULL,NULL);
@@ -381,26 +406,35 @@ INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,A
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Alfred M. Worden',1966,5,'Retired','2/7/1932','Jackson, MI','Male','US Military Academy; University of Michigan','Military Science','Aeronautical & Astronautical Engineering','Colonel','US Air Force (Retired)',1,295,1,0.5,'Apollo 15',NULL,NULL);
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('John W. Young',1962,2,'Retired','9/24/1930','San Francisco, CA','Male','Georgia Institute of Technology','Aeronautical Engineering',NULL,'Captain','US Navy (Retired)',6,835,3,20,'Gemini 3, Gemini 10, Apollo 10, Apollo 16, STS-1 (Columbia), STS-9 (Columbia)',NULL,NULL);
 INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('George D. Zamka',1998,17,'Retired','6/29/1962','Jersey City, NJ','Male','US Naval Academy; Florida Institute of Technology','Mathematics','Engineering Management','Colonel','US Marine Corps (Retired)',2,692,0,0,'STS-120 (Discovery), STS-130 (Endeavor)',NULL,NULL);
+
+/*Return properties of an astronaut that are retired, and female */
+SELECT * FROM astronauts WHERE status LIKE "%retired%" AND gender LIKE 'female';
+
 /*
-DATABASE SCHEMA
-astronauts357 rows
-Name (PK)TEXT
-YearINTEGER
-GroupNumINTEGER
-StatusTEXT
-Birth_DateTEXT
-Birth_PlaceTEXT
-GenderTEXT
-Alma_MaterTEXT
-Undergraduate_MajorTEXT
-Graduate_MajorTEXT
-Military_RankTEXT
-Military_BranchTEXT
-Space_FlightsINTEGER
-Space_Flight_hrINTEGER
-Space_WalksINTEGER
-Space_Walks_hrREAL
-MissionsTEXT
-Death_DateTEXT
-Death_MissionTEXT
-*/ 
+QUERY RESULTS
+Name	Year	GroupNum	Status	Birth_Date	Birth_Place	Gender	Alma_Mater	Undergraduate_Major	Graduate_Major	Military_Rank	Military_Branch	Space_Flights	Space_Flight_hr	Space_Walks	Space_Walks_hr	Missions	Death_Date	Death_Mission
+Ellen S. Baker	1984	10	Retired	4/27/1953	Fayettesville, NC	Female	State University of New York-Buffalo; Cornell University; University of Texas	Geology	Medicine; Public Health	NULL	NULL	3	686	0	0	STS-34 (Atlantis), STS-50 (Columbia), STS-71 (Atlantis)	NULL	NULL
+Mary L. Cleave	1980	9	Retired	2/5/1947	Southampton, NY	Female	Colorado State University; Utah State University	Biological Science	Microbial Ecology; Environmental Engineering	NULL	NULL	2	262	0	0	STS 61-B (Atlantis), STS-30 (Atlantis)	NULL	NULL
+Eileen M. Collins	1990	13	Retired	11/19/1959	Elmira, NY	Female	Syracuse University; Stanford University; Webster University	Mathematics & Economics	Operations Research; Space Systems Management	Colonel	US Air Force (Retired)	4	890	0	0	STS-63 (Discovery), STS-84 (Atlantis), STS-114 (Columbia), STS-93 (Discovery)	NULL	NULL
+N. Jan Davis	1987	12	Retired	11/1/1953	Cocoa Beach, FL	Female	Georgia Institute of Technology; Auburn University; University of Alabama-Huntsville	Applied Biology; Mechanical Engineering	Mechanical Engineering	NULL	NULL	3	673	0	0	STS-47 (Endeavor), STS-60 (Discovery), STS-85 (Discovery)	NULL	NULL
+Bonnie J. Dunbar	1980	9	Retired	3/3/1949	Sunnyside, WA	Female	University of Washington; University of Houston	Ceramic Engineering	Ceramic Engineering; Biomedical Engineering	NULL	NULL	5	1207	0	0	STS 61-A (Challenger), STS-32 (Columbia), STS-50 (Columbia), STS-71 (Atlantis), STS-89 (Endeavor)	NULL	NULL
+Linda M. Godwin	1985	11	Retired	7/2/1952	Cape Girardeau, MO	Female	Southeast Missouri State; University of Missouri	Mathematics & Physics	Physics	NULL	NULL	4	918	2	10	STS-37 (Atlantis), STS-59 (Endeavor), STS-76 (Atlantis), STS-108 (Endeavor)	NULL	NULL
+Susan J. Helms	1990	13	Retired	2/26/1958	Charlotte, NC	Female	US Air Force Academy; Stanford University	Aeronautical Engineering	Aeronautics & Astronautics	Lieutenant General	US Air Force	5	5063	1	9	STS-54 (Endeavor), STS-64 (Discovery), STS-78 (Columbia), STS-101 (Atlantis), STS-102/105 (Discovery)	NULL	NULL
+Joan E. Higginbotham	1996	16	Retired	8/3/1964	Chicago, IL	Female	Southern Illinois University-Carbondale; Florida Institute of Technology	Electrical Engineering	Business Management; Space Systems	NULL	NULL	1	308	0	0	STS-116 (Discovery)	NULL	NULL
+Millie Hughes-Fulford	NULL	NULL	Retired	12/21/1945	Mineral Wells, TX	Female	Tarleton State University; Texas Woman’s University	Chemistry & Biology	NULL	NULL	NULL	1	218	0	0	STS-40 (Columbia)	NULL	NULL
+Marsha S. Ivins	1984	10	Retired	4/15/1951	Baltimore, MD	Female	University of Colorado	Aerospace Engineering	NULL	NULL	NULL	5	1341	0	0	STS-32 (Columbia), STS-46 (Atlantis), STS-62 (Columbia), STS-81 (Atlantis), STS-98 (Atlantis)	NULL	NULL
+Mae C. Jemison	1987	12	Retired	10/17/1956	Decatur, AL	Female	Stanford University; Cornell University	Chemical Engineering	Medicine	NULL	NULL	1	190	0	0	STS-47 (Endeavor)	NULL	NULL
+Tamara E. Jernigan	1985	11	Retired	5/7/1959	Chattanooga, TN	Female	Stanford University; University of California-Berkeley; Rice University	Physics	Engineering Science; Astronomy	NULL	NULL	5	1489	1	8	STS-40 (Columbia), STS-52 (Columbia), STS-67 (Endeavor), STS-80 (Columbia), STS-98 (Discovery)	NULL	NULL
+Susan L. Kilrain (Still)	1995	15	Retired	10/24/1961	Augusta, GA	Female	Embry-Riddle University; Georgia Institute of Technology	Astronautical Engineering	Aerospace Engineering	Commander	US Navy (Retired)	2	472	0	0	STS-83 (Columbia), STS-94 (Columbia)	NULL	NULL
+Wendy B. Lawrence	1992	14	Retired	7/2/1959	Jacksonville, FL	Female	US Naval Academy; MIT	Ocean Engineering	Ocean Engineering	Captain	US Navy (Retired)	4	1223	0	0	STS-67 (Endeavor), STS-86 (Atlantis), STS-91 (Discovery), STS-114 (Discovery)	NULL	NULL
+Shannon W. Lucid	1978	8	Retired	1/14/1943	Shanghai, China	Female	University of Oklahoma	Chemistry	Biochemistry	NULL	NULL	5	5354	0	0	STS 51-G (Discovery), STS-34 (Atlantis), STS-43 (Atlantis), STS-58 (Columbia), STS-76/79 (Atlantis)	NULL	NULL
+Sandra H. Magnus	1996	16	Retired	10/30/1964	Belleville, IL	Female	University of Missouri-Rolla; Georgia Institute of Technology	Physics	Electrical Engineering; Materials Science & Engineering	NULL	NULL	3	3776	0	0	STS-112 (Atlantis), STS-126/119 (Endeavor/Discovery), STS-135 (Atlantis)	NULL	NULL
+Pamela A. Melroy	1995	15	Retired	9/17/1961	Palo Alto, CA	Female	Wellesley College; MIT	Physics & Astronomy	Earth & Planetary Sciences	Colonel	US Air Force (Retired)	3	914	0	0	STS-92 (Discovery), STS-112 (Atlantis), STS-120 (Discovery)	NULL	NULL
+Barbara R. Morgan	1998	17	Retired	11/28/1951	Fresno, CA	Female	Stanford University	Human Biology	NULL	NULL	NULL	1	305	0	0	STS-118 (Endeavor)	NULL	NULL
+Lisa M. Nowak	1996	16	Retired	5/10/1963	Washington, DC	Female	US Naval Academy; US Naval Postgraduate School	Aerospace Engineering	Aeronautical Engineering	Captain	US Navy (Retired)	1	306	0	0	STS-121 (Discovery)	NULL	NULL
+Margaret Rhea Seddon	1978	8	Retired	11/8/1947	Murfreesboro, TN	Female	University of California-Berkeley; University of Tennessee	Physiology	Medicine	NULL	NULL	3	722	0	0	STS 51-D (Discovery), STS-40 (Columbia), STS-58 (Columbia)	NULL	NULL
+Heidemarie M. Stefanyshyn-Piper	1996	16	Retired	2/7/1963	St. Paul, MN	Female	MIT	Mechanical Engineering	NULL	Captain	US Navy	2	663	2	33	STS-115 (Atlantis), STS-126 (Endeavor)	NULL	NULL
+Kathryn D. Sullivan	1978	8	Retired	10/3/1951	Patterson, NJ	Female	University of California-Santa Cruz; Dalhousie University	Earth Sciences	Earth Sciences; Geology	NULL	NULL	3	532	1	3	STS 41-G (Challenger), STS-31 (Discovery), STS-45 (Atlantis)	NULL	NULL
+Kathryn C. Thornton	1984	10	Retired	8/17/1952	Montgomery, AL	Female	Auburn University; University of Virginia	Physics	Physics	NULL	NULL	4	975	3	21	STS-33 (Discovery), STS-49 (Endeavor), STS-61 (Endeavor), STS-73 (Columbia)	NULL	NULL
+Mary E. Weber	1992	14	Retired	8/24/1962	Cleveland, OH	Female	Purdue University; University of California-Berkeley	Chemical Engineering	Physical Chemistry	NULL	NULL	2	450	0	0	STS-70 (Discovery), STS-101 (Atlantis)	NULL	NULL
+*/
