@@ -438,3 +438,11 @@ Kathryn D. Sullivan	1978	8	Retired	10/3/1951	Patterson, NJ	Female	University of 
 Kathryn C. Thornton	1984	10	Retired	8/17/1952	Montgomery, AL	Female	Auburn University; University of Virginia	Physics	Physics	NULL	NULL	4	975	3	21	STS-33 (Discovery), STS-49 (Endeavor), STS-61 (Endeavor), STS-73 (Columbia)	NULL	NULL
 Mary E. Weber	1992	14	Retired	8/24/1962	Cleveland, OH	Female	Purdue University; University of California-Berkeley	Chemical Engineering	Physical Chemistry	NULL	NULL	2	450	0	0	STS-70 (Discovery), STS-101 (Atlantis)	NULL	NULL
 */
+
+/*Return count of astronauts wher eyear was greater than or equal to 1990*/
+SELECT COUNT(*) FROM astronauts WHERE year > 1990;
+
+/*
+COUNT(*)
+135
+*/
