@@ -446,3 +446,51 @@ SELECT COUNT(*) FROM astronauts WHERE year > 1990;
 COUNT(*)
 135
 */
+
+/*Return only astronauts that attended the US Air Force Academy as their Alma Mater*/
+SELECT name FROM astronauts WHERE alma_mater LIKE "%US Air Force%";
+/* QUERY RESULTS
+Name
+John E. Blaha
+Michael J. Bloomfield
+Karol J. Bobko
+Eric A. Boe
+Roy D. Bridges Jr.
+Curtis L. Brown Jr.
+John H. Casper
+Kevin P. Chilton
+Richard O. Covey
+Alvin B. Drew Jr.
+Brian Duffy
+James P. Dutton Jr.
+Donn F. Eisele
+John M. Fabian
+Jack D. Fischer
+Guy S. Gardner
+Ronald J. Grabe
+Frederick D. Gregory
+William G. Gregory
+Sidney M. Gutierrez
+James D. Halsell Jr.
+L. Blaine Hammond Jr.
+Susan J. Helms
+Terence T. Henricks
+Gregory H. Johnson
+Thomas D. Jones
+James M. Kelly
+Kevin R. Kregel
+Mark C. Lee
+Kjell N. Lindgren
+Steven W. Lindsey
+Donald R. McMonagle
+Richard M. Mullane
+William A. Pailes
+Gary E. Payton
+Donald H. Peterson
+Charles J. Precourt
+Richard A. Searfoss
+Ronald M. Sega
+Loren J. Shriver
+Charles Lacy Veach
+Terry W. Virts Jr.
+*/
