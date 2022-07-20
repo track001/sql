@@ -13,6 +13,22 @@ INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("tree cli
 INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("rowing", 30, 70, 90);
 INSERT INTO exercise_logs(type, minutes, calories, heart_rate) VALUES ("hiking", 60, 80, 85);
 
+/*
+DATABASE SCHEMA
+exercise_logs
+        7 rows
+id (PK)INTEGER
+typeTEXT
+minutesINTEGER
+caloriesINTEGER
+heart_rateINTEGER
+drs_favorites
+        2 rows
+id (PK)INTEGER
+typeTEXT
+reasonTEXT
+*/
+
 SELECT * FROM exercise_logs WHERE type = "biking" OR type = "hiking" OR type = "tree climbing" OR type = "rowing";
 
 (same statement as above but uses commas)
